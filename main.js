@@ -5,7 +5,7 @@
 function max(x,y){
   if (x>y){
     return x;
-  }else (if x<y){
+  }else if (x<y){
     return y;
   }
 }
@@ -18,9 +18,19 @@ console.log (max(2,1))
 // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
 // Then, write and example of using the function.
 
-function maxOfThree(){
-    // Your answer here
+function maxOfThree(xx, yy, zz){
+  if (xx>yy && xx>zz){
+    return xx;
+  }else if (yy>xx && yy>zz){
+    return yy;
+  }else {
+    return zz;
+  }
 }
+
+console.log (maxOfThree(1, 2, 3))
+console.log(maxOfThree(3, 2, 1))
+console.log(maxOfThree(2, 1, 3))
 
 
 // 3.
@@ -28,33 +38,63 @@ function maxOfThree(){
 // Then, write and example of using the function.
 
 function isVowel(char){
-    // Your answer here
+  if (char === "a"||char==="e"||char==="i"||char==="o"||char==="u"){
+    return true;
+  }else {
+    return false;
+  }
 }
 
+console.log(isVowel("a"))
+console.log(isVowel("e"))
+console.log(isVowel("r"))
 
 // 4.
 // Write a function called `sum` that takes two parameters and returns the sum of those 2 numbers.
 // Then, write and example of using the function.
+function sum(par1, par2){
+  return par1 + par2;
+}
 
+console.log (sum(1, 2))
 
 
 // 5.
 // Write a function named `avg` that takes 3 parameters and returns the average of those 3 numbers.
 // Then, write and example of using the function.
+function avg(fir, sec, thi){
+  return (fir + sec + thi)/3;
+}
 
-
+console.log (avg(1, 2, 3))
+console.log (avg(4, 5, 6))
 
 // 6.
 // Write a function called `getLength` that takes one parameter (a string) and returns the length
 // Then, write and example of using the function.
+function getLength(l){
+  return l.length;
+}
 
-
+console.log(getLength("cat"))
+console.log(getLength("giraffe"))
 
 // 7.
 // Write a function called `greaterThan` that takes two parameters
 // and returns `true` if the second parameter is greater than the first.
 // Otherwise the function should return `false`.
 // Then, write and example of using the function.
+function greaterThan(j,k){
+  if (k>j){
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log (greaterThan(3,4))
+console.log (greaterThan(45,30))
+console.log (greaterThan(6,6))
 
 
 
@@ -64,7 +104,12 @@ function isVowel(char){
 // is formated like "Hello, Name!" where *Name*
 // is the parameter that was passed in.
 // Then, write and example of using the function.
+function greet(Name){
+  return "Hello " + (Name) + "!";
+}
 
+console.log (greet("Ricki"))
+console.log (greet("Gargi"))
 
 
 // 9.
@@ -75,3 +120,11 @@ function isVowel(char){
 // words: "quick", "fox", "fence"
 // sentence: "quick brown fox jumps over the fence"
 // Then, write and example of using the function.
+
+function madlib(Noun, Verb, Adj, Sub){
+  return Noun + " likes to " + Verb + " the " + Adj + Sub + ".";
+
+}
+
+console.log(madlib("Kevin", "play", "action", " games"))
+console.log (madlib("Stanlee", "fetch", "red", " ball"))
